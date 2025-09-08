@@ -1,0 +1,105 @@
+/* ---------- App title ---------- */
+.app-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 24px 0;
+  text-align: center;
+}
+
+/* optional: tighten the grid on wide screens */
+@media (min-width: 1200px) {
+  .card-grid .row { row-gap: 1.5rem; }
+}
+
+/* ---------- Unified chapter card (window style) ---------- */
+.chapter-card{
+  border-radius:16px;
+  overflow:hidden;
+  background:#0f1316;                      /* dark window */
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 6px 24px rgba(0,0,0,.25);
+  display:flex;
+  flex-direction:column;
+  max-width:480px;                          /* not too skinny */
+  margin-right:auto;                        /* left-align in column */
+  transition: transform .15s ease;
+}
+
+.chapter-card:hover { transform: translateY(-3px); }
+
+/* Locked state tint (no separate background needed) */
+.chapter-card.locked { cursor:not-allowed; }
+.chapter-card.locked .chapter-thumb {
+  filter: grayscale(.6) brightness(.75);
+}
+
+/* Completed badge just uses Bootstrap's .bg-success; keep a border if you like */
+.chapter-card.completed { border-color:#4caf50; }
+
+/* ---------- Full-bleed image ---------- */
+.chapter-thumb {
+  width:100%;
+  aspect-ratio:16/9;        /* consistent banner shape */
+  object-fit:cover;         /* cover entire width */
+  display:block;
+  filter:saturate(.95);
+}
+
+/* ---------- Body ---------- */
+.chapter-body{
+  padding:14px 16px 18px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+}
+
+.chapter-title{
+  font-weight:600;
+  font-size:1.05rem;
+  text-align:center;
+}
+
+.chapter-btn{ min-width:120px; }
+
+
+/* AI tutor answer text */
+.ai-answer {
+  background: #11161c;
+  border: 1px solid #22303d;
+  border-radius: 10px;
+  padding: 12px 14px;
+  line-height: 1.5;
+  color: #e6edf3;
+  white-space: pre-wrap;
+}
+
+/* Related Material list */
+.related-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.related-item {
+  border: 1px solid #22303d;
+  background: #0c1218;
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+.related-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.related-preview {
+  color: #a8b3c1;
+  font-size: 0.95rem;
+}
+
+/* subtle badge (Bootstrap 5 compatible fallback) */
+.bg-dark-subtle {
+  background-color: #e9ecef !important;
+}

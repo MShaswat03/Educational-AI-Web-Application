@@ -1,0 +1,20 @@
+{
+    "title": "Smart Charts!",
+    "learning_points": [
+      "Read bar graphs and tables.",
+      "Compare values from charts."
+    ],
+    "baseline_assessment": [
+      "I can read a bar graph yes",
+      "I can infer trends no"
+    ],
+    "quiz": [
+      { "question": "Bar graphs use bars to show ____", "answer": "quantity" },
+      { "question": "A table organizes data in rows and ____", "answer": "columns" },
+      { "question": "Tallest bar represents the (least/most) value", "answer": "most" }
+    ],
+    "chapter_id": "eemh113",
+    "locked": false,
+    "ai_tutor_limit": 3
+  }
+  

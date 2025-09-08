@@ -1,0 +1,20 @@
+{
+    "title": "The Fish Tale",
+    "learning_points": [
+      "Read price lists and compute unit costs.",
+      "Estimate totals and choose better deals."
+    ],
+    "baseline_assessment": [
+      "I can read a price list yes",
+      "I can compute unit price no"
+    ],
+    "quiz": [
+      { "question": "Unit cost = total price ÷ ____", "answer": "quantity" },
+      { "question": "A discount makes price (increase/decrease)", "answer": "decrease" },
+      { "question": "Best estimate of 49.8 × 2", "answer": "~100" }
+    ],
+    "chapter_id": "eemh101",
+    "locked": false,
+    "ai_tutor_limit": 3
+  }
+  

@@ -1,0 +1,20 @@
+{
+    "title": "How Many Squares?",
+    "learning_points": [
+      "Count 1×1 and k×k squares in grids.",
+      "Use systematic counting."
+    ],
+    "baseline_assessment": [
+      "I can count 1×1 squares yes",
+      "I can generalize to k×k squares no"
+    ],
+    "quiz": [
+      { "question": "In N×N grid, 1×1 squares count?", "answer": "N^2" },
+      { "question": "Total k×k squares formula part?", "answer": "(N−k+1)^2" },
+      { "question": "All squares in a 3×3 grid?", "answer": "14" }
+    ],
+    "chapter_id": "eemh104",
+    "locked": false,
+    "ai_tutor_limit": 3
+  }
+  

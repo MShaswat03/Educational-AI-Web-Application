@@ -1,0 +1,20 @@
+{
+    "title": "Shapes and Angles",
+    "learning_points": [
+      "Name basic polygons.",
+      "Identify right, acute, obtuse angles."
+    ],
+    "baseline_assessment": [
+      "I can spot a right angle yes",
+      "I can classify polygons by sides no"
+    ],
+    "quiz": [
+      { "question": "Angle < 90° is called ____", "answer": "acute" },
+      { "question": "A 4-sided polygon is a ____", "answer": "quadrilateral" },
+      { "question": "Angle of a straight line is ____°", "answer": "180" }
+    ],
+    "chapter_id": "eemh102",
+    "locked": false,
+    "ai_tutor_limit": 3
+  }
+  

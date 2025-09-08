@@ -1,0 +1,20 @@
+{
+    "title": "How Big? How Heavy? (Revision Lab)",
+    "learning_points": [
+      "Revise key concepts across chapters.",
+      "Apply mixed-skills practice."
+    ],
+    "baseline_assessment": [
+      "I remember area vs perimeter yes",
+      "I can convert grams to kilograms no"
+    ],
+    "quiz": [
+      { "question": "HCF of 8 and 12", "answer": "4" },
+      { "question": "0.25 equals ____/100", "answer": "25" },
+      { "question": "Square has ____ lines of symmetry", "answer": "4" }
+    ],
+    "chapter_id": "eemh114",
+    "locked": false,
+    "ai_tutor_limit": 3
+  }
+  

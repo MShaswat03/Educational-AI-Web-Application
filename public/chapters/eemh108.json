@@ -1,0 +1,20 @@
+{
+    "title": "Can You See the Pattern?",
+    "learning_points": [
+      "Continue and generalize patterns.",
+      "Spot rules behind sequences."
+    ],
+    "baseline_assessment": [
+      "I can extend an AB pattern yes",
+      "I can find the nth term no"
+    ],
+    "quiz": [
+      { "question": "Next in 2,4,8,16,__", "answer": "32" },
+      { "question": "Arithmetic sequence adds a fixed ____", "answer": "difference" },
+      { "question": "Odd numbers sequence starts at ____", "answer": "1" }
+    ],
+    "chapter_id": "eemh108",
+    "locked": false,
+    "ai_tutor_limit": 3
+  }
+  

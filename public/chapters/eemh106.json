@@ -1,0 +1,20 @@
+{
+    "title": "Does it Look the Same?",
+    "learning_points": [
+      "Identify symmetry and reflections.",
+      "Recognize rotational symmetry."
+    ],
+    "baseline_assessment": [
+      "I can find a line of symmetry yes",
+      "I can identify rotational order no"
+    ],
+    "quiz": [
+      { "question": "A square has how many lines of symmetry?", "answer": "4" },
+      { "question": "Rotation symmetry order of an equilateral triangle?", "answer": "3" },
+      { "question": "Mirror across a vertical line flips (left/right)?", "answer": "left" }
+    ],
+    "chapter_id": "eemh106",
+    "locked": false,
+    "ai_tutor_limit": 3
+  }
+  

@@ -1,0 +1,20 @@
+{
+    "title": "Area and Its Boundary",
+    "learning_points": [
+      "Differentiate area vs perimeter.",
+      "Compute area of rectangles."
+    ],
+    "baseline_assessment": [
+      "I can find a rectangle's perimeter yes",
+      "I can compute area with formula no"
+    ],
+    "quiz": [
+      { "question": "Perimeter measures the ____ around", "answer": "distance" },
+      { "question": "Area of rectangle = ____ × ____", "answer": "length × breadth" },
+      { "question": "Units of area use ____ squared", "answer": "length" }
+    ],
+    "chapter_id": "eemh112",
+    "locked": false,
+    "ai_tutor_limit": 3
+  }
+  

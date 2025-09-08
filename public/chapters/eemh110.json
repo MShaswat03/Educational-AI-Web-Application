@@ -1,0 +1,20 @@
+{
+    "title": "Boxes and Sketches",
+    "learning_points": [
+      "Visualize 3D shapes from nets.",
+      "Match sketches to solids."
+    ],
+    "baseline_assessment": [
+      "I can name faces/edges/vertices yes",
+      "I can pick a correct cube net no"
+    ],
+    "quiz": [
+      { "question": "A cube has ____ faces", "answer": "6" },
+      { "question": "A cylinder has how many vertices?", "answer": "0" },
+      { "question": "A cube net uses how many squares?", "answer": "6" }
+    ],
+    "chapter_id": "eemh110",
+    "locked": false,
+    "ai_tutor_limit": 3
+  }
+  

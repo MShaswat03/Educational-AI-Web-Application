@@ -1,0 +1,20 @@
+{
+    "title": "Be My Multiple, I'll be Your Factor",
+    "learning_points": [
+      "Understand factors & multiples.",
+      "Apply HCF and LCM."
+    ],
+    "baseline_assessment": [
+      "I can list factors of 24 yes",
+      "I can find LCM of two numbers no"
+    ],
+    "quiz": [
+      { "question": "HCF of 12 and 18", "answer": "6" },
+      { "question": "LCM of 4 and 6", "answer": "12" },
+      { "question": "Is 3 a factor of 25? (yes/no)", "answer": "no" }
+    ],
+    "chapter_id": "eemh107",
+    "locked": false,
+    "ai_tutor_limit": 3
+  }
+  

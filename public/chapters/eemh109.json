@@ -1,0 +1,20 @@
+{
+    "title": "Mapping Your Way",
+    "learning_points": [
+      "Read maps and legends.",
+      "Use directions and scale."
+    ],
+    "baseline_assessment": [
+      "I can interpret a map key yes",
+      "I can use scale to measure no"
+    ],
+    "quiz": [
+      { "question": "Scale 1:1000, 5 cm equals ____ m", "answer": "50" },
+      { "question": "Legend explains map ____", "answer": "symbols" },
+      { "question": "Facing north, right turn points to ____", "answer": "east" }
+    ],
+    "chapter_id": "eemh109",
+    "locked": false,
+    "ai_tutor_limit": 3
+  }
+  

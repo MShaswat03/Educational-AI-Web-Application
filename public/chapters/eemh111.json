@@ -1,0 +1,20 @@
+{
+    "title": "Tenths and Hundredths",
+    "learning_points": [
+      "Place value of decimals.",
+      "Compare and add decimals."
+    ],
+    "baseline_assessment": [
+      "I can read to two decimal places yes",
+      "I can add 0.3 and 0.07 no"
+    ],
+    "quiz": [
+      { "question": "0.5 equals ____/10", "answer": "5" },
+      { "question": "Which is larger: 0.47 or 0.7", "answer": "0.7" },
+      { "question": "0.3 + 0.07 = ____", "answer": "0.37" }
+    ],
+    "chapter_id": "eemh111",
+    "locked": false,
+    "ai_tutor_limit": 3
+  }
+  

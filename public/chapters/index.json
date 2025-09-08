@@ -1,0 +1,17 @@
+[
+  { "id": "eemh101", "name": "The Fish Tale",                          "locked": false, "ai_tutor_limit": 3, "thumb": "/chapter-placeholder.png" },
+  { "id": "eemh102", "name": "Shapes and Angles",                       "locked": false, "ai_tutor_limit": 3, "thumb": "/chapter-placeholder.png" },
+  { "id": "eemh103", "name": "Exploring Shapes and Area",               "locked": false, "ai_tutor_limit": 3, "thumb": "/chapter-placeholder.png" },
+
+  { "id": "eemh104", "name": "How Many Squares?",                       "locked": false, "ai_tutor_limit": 3, "thumb": "/chapter-placeholder.png" },
+  { "id": "eemh105", "name": "Parts and Wholes",                        "locked": false, "ai_tutor_limit": 3, "thumb": "/chapter-placeholder.png" },
+  { "id": "eemh106", "name": "Does it Look the Same?",                  "locked": false, "ai_tutor_limit": 3, "thumb": "/chapter-placeholder.png" },
+  { "id": "eemh107", "name": "Be My Multiple, I'll be Your Factor",     "locked": false, "ai_tutor_limit": 3, "thumb": "/chapter-placeholder.png" },
+  { "id": "eemh108", "name": "Can You See the Pattern?",                "locked": false, "ai_tutor_limit": 3, "thumb": "/chapter-placeholder.png" },
+  { "id": "eemh109", "name": "Mapping Your Way",                        "locked": false, "ai_tutor_limit": 3, "thumb": "/chapter-placeholder.png" },
+  { "id": "eemh110", "name": "Boxes and Sketches",                      "locked": false, "ai_tutor_limit": 3, "thumb": "/chapter-placeholder.png" },
+  { "id": "eemh111", "name": "Tenths and Hundredths",                   "locked": false, "ai_tutor_limit": 3, "thumb": "/chapter-placeholder.png" },
+  { "id": "eemh112", "name": "Area and Its Boundary",                   "locked": false, "ai_tutor_limit": 3, "thumb": "/chapter-placeholder.png" },
+  { "id": "eemh113", "name": "Smart Charts!",                           "locked": false, "ai_tutor_limit": 3, "thumb": "/chapter-placeholder.png" },
+  { "id": "eemh114", "name": "How Big? How Heavy? (Revision Lab)",      "locked": false, "ai_tutor_limit": 3, "thumb": "/chapter-placeholder.png" }
+]

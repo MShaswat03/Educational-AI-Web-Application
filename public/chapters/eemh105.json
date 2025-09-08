@@ -1,0 +1,20 @@
+{
+    "title": "Parts and Wholes",
+    "learning_points": [
+      "Relate fractions to parts of a whole.",
+      "Compare simple fractions."
+    ],
+    "baseline_assessment": [
+      "I can shade 3/4 of a shape yes",
+      "I can compare 3/5 and 2/3 no"
+    ],
+    "quiz": [
+      { "question": "1/2 equals what decimal?", "answer": "0.5" },
+      { "question": "Which is larger: 3/5 or 2/3?", "answer": "2/3" },
+      { "question": "Equivalent to 2/4?", "answer": "1/2" }
+    ],
+    "chapter_id": "eemh105",
+    "locked": false,
+    "ai_tutor_limit": 3
+  }
+  
