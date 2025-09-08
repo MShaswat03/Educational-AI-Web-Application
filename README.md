@@ -1,24 +1,21 @@
 # Educational AI Web Application
 
 An AI-powered learning portal that combines:
-- Chapter PDF ingestion (vectorized using `nomic-embed-text`)
-- Retrieval-Augmented Generation (RAG) with Ollama + LangChain
+- Chapter PDF ingention (vectorized using `nomic-embed-text`).
+- Retrieval-Augmented Generation (RAG) with Ollama + LangChain.
 - Interactive frontend (React + Bootstrap) for quizzes, baseline tests, and AI tutoring.
 
 ---
-
 ## Features
-- Uploads and indexes PDF chapters automatically
-- Generates chunked embeddings via LangChain + ChromaDB
-- Runs a Flask backend with `/rag` endpoint
-- React frontend integrates:
-  - Baseline Assessments
-  - MCQs (Novice → Intermediate → Advanced)
-  - AI Tutor (RAG-powered Q&A) with source citations (shown as *Related Material*)
-
+- Uploads and indexs PDF chapters automatically.
+- Generates chunked embeddings using LangChain and ChromaDB.
+- Runs a Flask backend with the `/rag` endpoint
+- React frontend includes:
+    - Baseline Assessments
+    - MCQs (Novice, Intermediate, Advanced)
+    - AI Tutor (RAG-powered Q&A) with source citations
 ---
-
-## Requirements
+## Requirements 
 - Python 3.10+ (tested on 3.13 with venv)
 - Node.js 18+ and npm
 - Git
@@ -26,41 +23,41 @@ An AI-powered learning portal that combines:
 
 ---
 
-## Setup Instructions
+## Setup Instructions 
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/MShaswat03/Educational-AI-Web-Application.git
-cd Educational-AI-Web-Application
+git clone  https://github.com/MShaswat03/Educational-AI-Web-Application.git
+cd Educational-AI-Web-Aplication
 ```
-
 ### 2. Backend Setup (Flask + LangChain)
 
-#### 2.1 Create and activate a virtual environment
-```bash
-python3 -m venv venv
-source venv/bin/activate      # macOS/Linux
-venv\Scripts\activate         # Windows
-```
+### 2.1 Create and activate a virtual environment 
+```bash 
+  python3 -m venv venv
+  source venv/bin/activate  # macOS/Linux
+  venv\Scripts\activate     # Windows 
+  ```
 2.2 Install dependencies
 ```
 pip install -r requirements.txt
 ```
+
 2.3 Start Ollama & pull models
 
-Download Ollama from https://ollama.com/download
- and make sure it is running.
+Download Ollama from ttps://ollama.com/download
 
 Pull required models:
 ```
 ollama pull nomic-embed-text
 ollama pull llama3:8b
 ```
+
 2.4 Environment Variables (optional)
 
 You can configure via .env or directly in shell:
 ```
-export CHAPTER_DIR=./admin_engine/uploads
+export CHATER_DIR=./admin_engine/uploads
 export EMBED_MODEL=nomic-embed-text
 export LLM_MODEL=llama3:8b
 export DEBUG_RAG=1
@@ -73,8 +70,9 @@ Expected output:
 ```
 [RAG] eemh103: pages=16, chunks=22
 Chapters indexed: ['eemh103', 'eemh104']
- * Running on http://127.0.0.1:5001
+* Running on  http://127.0.0.1:5001
 ```
+
 
 Backend API:
 
