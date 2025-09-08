@@ -123,7 +123,7 @@ Use AI Tutor box to ask questions (e.g. “What is the area of a rectangle with 
 The system will answer with context + Related Material.
 
 Project Structure
-Educational-AI-Web-Application/
+```Educational-AI-Web-Application/
 │
 ├── app.py                  # Flask backend (RAG engine)
 ├── requirements.txt        # Python dependencies
@@ -138,6 +138,7 @@ Educational-AI-Web-Application/
 │   └── package.json
 │
 └── README.md               # This file
+```
 
 Example API Call
 curl -X POST http://localhost:5001/rag \
