@@ -1,70 +1,162 @@
-# Getting Started with Create React App
+# Educational AI Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An AI-powered learning portal that combines:
+- Chapter PDF ingestion (vectorized using `nomic-embed-text`)
+- Retrieval-Augmented Generation (RAG) with Ollama + LangChain
+- Interactive frontend (React + Bootstrap) for quizzes, baseline tests, and AI tutoring.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
+- Uploads and indexes PDF chapters automatically
+- Generates chunked embeddings via LangChain + ChromaDB
+- Runs a Flask backend with `/rag` endpoint
+- React frontend integrates:
+  - Baseline Assessments
+  - MCQs (Novice → Intermediate → Advanced)
+  - AI Tutor (RAG-powered Q&A) with source citations (shown as *Related Material*)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Requirements
+- Python 3.10+ (tested on 3.13 with venv)
+- Node.js 18+ and npm
+- Git
+- Ollama (running locally)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Setup Instructions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 1. Clone the repository
+```bash
+git clone https://github.com/MShaswat03/Educational-AI-Web-Application.git
+cd Educational-AI-Web-Application
+```
 
-### `npm run build`
+### 2. Backend Setup (Flask + LangChain)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### 2.1 Create and activate a virtual environment
+```bash
+python3 -m venv venv
+source venv/bin/activate      # macOS/Linux
+venv\Scripts\activate         # Windows
+```
+2.2 Install dependencies
+```
+pip install -r requirements.txt
+```
+2.3 Start Ollama & pull models
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Download Ollama from https://ollama.com/download
+ and make sure it is running.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Pull required models:
+```
+ollama pull nomic-embed-text
+ollama pull llama3:8b
+```
+2.4 Environment Variables (optional)
 
-### `npm run eject`
+You can configure via .env or directly in shell:
+```
+export CHAPTER_DIR=./admin_engine/uploads
+export EMBED_MODEL=nomic-embed-text
+export LLM_MODEL=llama3:8b
+export DEBUG_RAG=1
+```
+2.5 Start the backend
+```
+python app.py
+```
+Expected output:
+```
+[RAG] eemh103: pages=16, chunks=22
+Chapters indexed: ['eemh103', 'eemh104']
+ * Running on http://127.0.0.1:5001
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Backend API:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+POST /rag → Ask a question (with {chapter, question} JSON body)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+GET /debug/chunks/<chapter> → Inspect chunks
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+POST /debug/search → Inspect retrieval step only
+3. Frontend Setup (React)
+3.1 Install dependencies
+3. Frontend Setup (React)
+3.1 Install dependencies
+cd frontend
+npm install
 
-## Learn More
+3.2 Configure backend URL
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+By default, frontend calls http://localhost:5001/rag.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To override, create a .env file inside frontend/:
 
-### Code Splitting
+VITE_RAG_URL=http://localhost:5001/rag
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3.3 Start frontend
+npm run dev
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Open http://localhost:5173
+ in your browser.
 
-### Making a Progressive Web App
+Usage Workflow
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Upload PDFs into admin_engine/uploads/
 
-### Advanced Configuration
+Start backend:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+python app.py
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Start frontend:
 
-### `npm run build` fails to minify
+npm run dev
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Open browser → Select a chapter → Take baseline assessment → Quizzes
+
+Use AI Tutor box to ask questions (e.g. “What is the area of a rectangle with sides 8 and 5 cm?”).
+The system will answer with context + Related Material.
+
+Project Structure
+Educational-AI-Web-Application/
+│
+├── app.py                  # Flask backend (RAG engine)
+├── requirements.txt        # Python dependencies
+├── admin_engine/
+│   └── uploads/            # PDF chapters
+│
+├── frontend/               # React frontend
+│   ├── src/
+│   │   ├── AppAuto.jsx     # Main app driver
+│   │   ├── AITutor.jsx     # RAG-integrated AI tutor
+│   │   └── ui.css          # Styling
+│   └── package.json
+│
+└── README.md               # This file
+
+Example API Call
+curl -X POST http://localhost:5001/rag \
+  -H "Content-Type: application/json" \
+  -d '{"chapter":"eemh103","question":"How do you find the area of a rectangle?"}'
+
+
+Response:
+
+{
+  "answer": "To find the area of a rectangle, multiply length × width.",
+  "sources": [
+    {
+      "page": 11,
+      "preview": "Here is a rectangle of area 20 square cm...",
+      "source": "eemh103.pdf"
+    }
+  ]
+}
+
